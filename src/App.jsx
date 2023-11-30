@@ -7,6 +7,7 @@ import { Host } from './components/Host'
 import { Join } from './components/Join'
 import { Game } from './components/Game'
 import { WaitingRoom } from './components/WaitingRoom'
+import { Provider } from 'react-redux'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,7 +18,7 @@ function App() {
         <Route path="/" element={<OpeningScreen />} />
         <Route path="/host" element={<Host />} />
         <Route path="/join" element={<Join />} />
-        <Route path="/waiting-room" element={<WaitingRoom />} />
+        <Route path="/waiting-room/:roomid/:status" element={<WaitingRoom />} />
         <Route path="/game" element={<Game />} />
       </Routes>
     </div>

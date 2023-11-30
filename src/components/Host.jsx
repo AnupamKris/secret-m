@@ -6,21 +6,25 @@ import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 export const Host = () => {
-    const [roomid, setRoomid] = useState(v4().slice(0,4))
+    const [roomid, setRoomid] = useState(v4().slice(0,6))
     const navigate = useNavigate()
-    async function createGame(){
+    const createGame = () => {
         console.log("Request iniated!")
-        await axios.post('http://localhost:5000/hostGame', {
-            roomid: roomid
-        })
-        .then((response)=>{
-            console.log(response['data'])
-            navigate(`/waiting-room`)
-        })
-        .catch((error)=>{
-            console.log(error)
-        })
+        navigate(`/waiting-room/${roomid}/host`)
     }
+    // async function createGame(){
+    //     console.log("Request iniated!")
+    //     await axios.post('http://localhost:5000/hostGame', {
+    //         roomid: roomid
+    //     })
+    //     .then((response)=>{
+    //         console.log(response['data'])
+    //         navigate(`/waiting-room/${roomid}/host`)
+    //     })
+    //     .catch((error)=>{
+    //         console.log(error)
+    //     })
+    // }
     
 
   return (
