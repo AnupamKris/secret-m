@@ -1,0 +1,111 @@
+
+/* Color Theme WILD WEST */
+$www1: #F2D129;
+$www1hover: #f1df80;
+$www2: #F28627;
+$www3: #D95829;
+$www4: #400F04;
+$www5: #BF3326;
+
+
+.waiting-room-container{
+    background-color: $www5;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    // justify-content: flex-start;
+    align-items: center;
+
+    .logo{
+        font-family: 'Gilroy' , 'Lost Type 2023 Regular', sans-serif;
+        font-size: 3em;
+        font-weight: bold;
+        color: $www4;
+        margin-top: 30px;
+        position: relative;
+
+        &::before{
+            content: 'Secret Modi';
+            position: absolute;
+            color: white;
+            margin-left: 5px;
+            top: -5px;
+            z-index: 100;
+            text-align: center;
+            text-wrap: nowrap;
+        }
+    }
+
+    .roomcode{
+        font-family: 'Gilroy' , 'Lost Type 2023 Regular', sans-serif;
+        font-size: 1.5em;
+        font-weight: bold;
+        color: $www4;
+        margin: 30px 0 ;
+        position: relative;
+        text-align: center;
+        text-wrap: nowrap;
+        background-color: $www1;
+        padding: 5px 10px;
+        border-radius: 10px;
+        border: $www4 solid 5px;
+    }
+    
+    .userpool-container{
+        background-color: $www1;
+        padding: 5px 10px;
+        border-radius: 10px;
+        border: $www4 solid 5px;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+
+        .userpool-cards{
+            color: white;
+            font-family: 'Gilroy' , 'Lost Type 2023 Regular', sans-serif;
+            font-size: 1.2em;
+            
+            .userpool-card{
+                background-color: $www4;
+                margin: 10px 0;
+                padding: 5px 10px;
+
+                &:nth-child(1){
+                    border-radius: 10px 10px 0 0;
+                    background-color: $www5;
+                    position: relative;
+
+                    &::after{
+                        content: 'HOST';
+                        position: absolute;
+                        right: 10px;
+                        top: 35%;
+                        font-size: .5em;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+
+    .waitingroom-options{
+        background-color: $www1;
+        padding: 5px 10px;
+        justify-self: end;
+        margin-top: 30px;
+        border-radius: 10px;
+        border: $www4 solid 5px;
+        width: 50%;
+
+        .waitingroom-option{
+            background-color: $www4;
+            color: white;
+            padding: 10px 10px;
+            font-size: 1.2em;
+            font-family: 'Gilroy' , 'Lost Type 2023 Regular', sans-serif;
+            margin: 10px 0;
+            border-radius: 10px;
+            text-align: center;
+        }
+    }
+}

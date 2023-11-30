@@ -1,0 +1,53 @@
+
+/* Color Theme WILD WEST */
+$www1: #F2D129;
+$www1hover: #f1df80;
+$www2: #F28627;
+$www3: #D95829;
+$www4: #400F04;
+$www5: #BF3326;
+
+
+.host-container{
+    // background-color: aliceblue;
+    .page-title{
+        font-size: 3em;
+        font-weight: bold;
+        font-family: 'Gilroy';
+        color: white;
+        margin-bottom: 30px;
+        text-align: center;
+        span{
+            position: relative;
+            text-wrap: nowrap;
+            color: $www4;
+            &::after{
+                content: 'Host a game';
+                position: absolute;
+                top: -2px;
+                left: -2px;
+                color: white;
+            }
+        }
+    }
+
+    .host-items{
+        background-color: #400F04;
+        .host-item{
+            background-color: $www1;
+            width: 100%;
+            margin: 20px 0;
+            padding: 15px;
+            font-size: 1.5em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Gilroy', sans-serif;
+            input{
+                padding: 3px;
+                font-size: 1em;
+            }
+        }
+    }
+}

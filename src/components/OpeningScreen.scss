@@ -1,0 +1,104 @@
+
+/* Color Theme WILD WEST */
+$www1: #F2D129;
+$www1hover: #f1df80;
+$www2: #F28627;
+$www3: #D95829;
+$www4: #400F04;
+$www5: #BF3326;
+
+
+
+.openingScreen-container{
+    // display: flex;
+    background-color: $www5;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .menu-container{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        // background-color: #F2D129;
+        width: 100%;
+
+        .logo{
+            font-size: 3em;
+            font-weight: bold;
+            font-family: 'Gilroy' , 'Lost Type 2023 Regular', sans-serif;
+            color: $www4;
+            position: relative;
+            z-index: 10;
+            text-align: center;
+
+            &::before{
+                content: 'Secret Modi';
+                position: absolute;
+                color: white;
+                margin-left: 5px;
+                top: -5px;
+                z-index: 100;
+                text-align: center;
+            }
+        }
+
+        .menu-items{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 50px;
+
+            .menu-item{
+                margin: 10px 0;
+                font-size: 1.3em;
+                font-weight: bold;
+                font-family: 'Gilroy';
+                background-color: $www1;
+                width: 60%;
+                padding: 15px 0px;
+                border-radius: 10px;
+                border: $www4 5px solid;
+
+                &:hover{
+                    background-color: $www1hover;
+                    cursor: pointer;
+                }
+
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
+
+                input{
+                    top: 0;
+                    left: 0;
+                    margin: 0;
+                    padding: 3px;
+                    background-color: $www1;
+                    border: none;
+
+                }
+            }
+        }
+
+        .menuInput{
+            font-size: 1.3em;
+            background-color: $www1;
+            border: $www4 5px solid;
+            border-radius: 10px;
+            width: 60%;
+            padding: 15px 0;
+            margin: 10px 0;
+            text-align: center;
+            font-family: 'Gilroy';
+            font-weight: bold;
+            color: $www5;
+        }
+    }
+}
